@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="rock_paper_scissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZZ-N5-O6i">
+                                <rect key="frame" x="60" y="567" width="54" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="✊"/>
+                                <connections>
+                                    <action selector="tapRockButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Mn5-Cs-eOY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwV-14-q4a">
+                                <rect key="frame" x="169" y="548" width="54" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="✌️"/>
+                                <connections>
+                                    <action selector="tapScissorsButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="d71-H5-tMP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NT-aF-UeR">
+                                <rect key="frame" x="279" y="573" width="54" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="✋"/>
+                                <connections>
+                                    <action selector="tapPaperButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="uac-SJ-Ms9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="勝敗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKs-xB-FA5">
+                                <rect key="frame" x="143" y="159" width="100.66666666666669" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="7NT-aF-UeR" secondAttribute="trailing" constant="60" id="HDp-ub-EJS"/>
+                            <constraint firstItem="fwV-14-q4a" firstAttribute="leading" secondItem="4ZZ-N5-O6i" secondAttribute="trailing" constant="55" id="JEg-I8-Ni2"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="7NT-aF-UeR" secondAttribute="bottom" constant="223" id="JUm-Ne-4Y1"/>
+                            <constraint firstItem="4ZZ-N5-O6i" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="60" id="Wgh-F2-l3Z"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="fwV-14-q4a" secondAttribute="bottom" constant="198" id="baw-Pu-GGx"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="4ZZ-N5-O6i" secondAttribute="bottom" constant="216" id="caw-kL-wTN"/>
+                            <constraint firstItem="XKs-xB-FA5" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="100" id="jmf-Iv-N0J"/>
+                            <constraint firstItem="7NT-aF-UeR" firstAttribute="leading" secondItem="fwV-14-q4a" secondAttribute="trailing" constant="56" id="olf-rW-FFX"/>
+                            <constraint firstItem="4ZZ-N5-O6i" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="508" id="tdh-sD-Zer"/>
+                            <constraint firstItem="7NT-aF-UeR" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="514" id="wPx-0R-2cY"/>
+                            <constraint firstItem="XKs-xB-FA5" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="143" id="xjQ-yI-1lN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="XKs-xB-FA5" id="Ftl-gf-c2b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
